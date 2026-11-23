@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXMA.IO - Best Crypto Faucets & Earning Sites</title>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <header>
+        <div class="header-left">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
+                EXMA.IO
+            </a>
+            <a href="#gift" class="gift-pill">
+                <i class="fa-solid fa-gift"></i> GET $3 WELCOME GIFT!
+            </a>
+        </div>
+        <button class="menu-btn" onclick="alert('Menu clicked! Add your navigation links here.')">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+
+    <!-- Search & Filter Section -->
+    <div class="controls-container">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="Search earning sites..." onkeyup="filterSites()">
+        </div>
+        <div class="filter-tabs">
+            <button class="filter-btn active" onclick="setCategory('all', this)">All Sites</button>
+            <button class="filter-btn" onclick="setCategory('faucet', this)">Faucet & PTC</button>
+            <button class="filter-btn" onclick="setCategory('watch', this)">Watch & Earn</button>
+            <button class="filter-btn" onclick="setCategory('offers', this)">Offers & Tasks</button>
+        </div>
+    </div>
+
+    <!-- Main Cards Grid -->
+    <div class="container">
+        <div class="cards-grid" id="cardsContainer">
+            <!-- Cards will be dynamically loaded here from script.js -->
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+  </html>
