@@ -82,7 +82,7 @@ const earningSites = [
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
         btnStyle: "dark",
-        url: "https://example.com/clipcoin"
+        url: "https://clipcoin.pro/u/lzqxv"
     },
     {
         name: "Pick Sites",
