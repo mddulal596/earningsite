@@ -1,5 +1,26 @@
-// এখানে আপনি নতুন সাইট যোগ করতে বা আপনার রেফারেল লিংক পরিবর্তন করতে পারবেন
+// এখানে সাইটের নাম, তথ্য এবং আপনার রেফারেল লিংকগুলো যুক্ত করা হয়েছে
 const earningSites = [
+    {
+        name: "FaucetPay",
+        category: "faucet",
+        subCategory: "WALLET & EARN",
+        iconText: "FP",
+        iconBg: "#1E88E5",
+        badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
+        badge2: { text: "TOP", type: "contest", icon: "fa-circle" },
+        tagline: "RECEIVE INSTANT CRYPTO PAYMENTS",
+        highlight: "Microwallet & Earnings Platform",
+        features: [
+            "PTC, Offerwall, Surveys, Games",
+            "Instant crypto payouts & faucet list"
+        ],
+        metaLabel: "WITHDRAW TO:",
+        metaValue: "Crypto Wallet",
+        metaIcon: "fa-wallet",
+        btnIcon: "fa-arrow-up-right-from-square",
+        btnStyle: "brown",
+        url: "https://faucetpay.io/r/541045"
+    },
     {
         name: "Exmacoin",
         category: "faucet",
@@ -19,28 +40,7 @@ const earningSites = [
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
         btnStyle: "brown",
-        url: "https://example.com/exmacoin"
-    },
-    {
-        name: "Earnbitmoon",
-        category: "faucet",
-        subCategory: "FAUCET & PTC",
-        iconText: "EBM",
-        iconBg: "#F5B041",
-        badge1: { text: "TOP", type: "orange", icon: "fa-fire" },
-        badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
-        tagline: "1,300,000+ USERS • $800K+ PAID OUT",
-        highlight: "Claim Faucet Every 5 Minutes",
-        features: [
-            "PTC ads - Offers - Slinks - Tasks",
-            "Join $1,000 Offerwall Contest!"
-        ],
-        metaLabel: "PAYMENT PROOF:",
-        metaValue: "+ $5.85",
-        metaIcon: "fa-coins",
-        btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
-        url: "https://example.com/earnbitmoon"
+        url: "https://exmacoin.com/?r=mddulalhosen0"
     },
     {
         name: "FireFaucet",
@@ -61,112 +61,280 @@ const earningSites = [
         metaIcon: "fa-coins",
         btnIcon: "fa-arrow-up-right-from-square",
         btnStyle: "dark",
-        url: "https://example.com/firefaucet"
+        url: "https://firefaucet.win/ref/417972?s=mddulal596"
     },
     {
-        name: "ClipCoin",
-        category: "watch",
-        subCategory: "WATCH & EARN",
-        iconText: "▶",
-        iconBg: "#6C3483",
-        badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
-        badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
-        tagline: "WATCH VIDEOS & COMPLETE TASKS!",
-        highlight: "Earn money by watching videos!",
+        name: "VieFaucet",
+        category: "faucet",
+        subCategory: "FAUCET & PTC",
+        iconText: "VF",
+        iconBg: "#16A085",
+        badge1: { text: "TOP", type: "orange", icon: "fa-fire" },
+        badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
+        tagline: "HIGHEST FAUCET CLAIM REWARDS!",
+        highlight: "Claim faucet every 4 minutes!",
         features: [
-            "Boost your income up to + 50%",
-            "Minimum withdraw - just $0.10!"
+            "View ads & complete shortlinks",
+            "Daily bonus, challenges & offers"
         ],
         metaLabel: "WITHDRAW TO:",
         metaValue: "FaucetPay",
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
         btnStyle: "dark",
-        url: "https://clipcoin.pro/u/lzqxv"
+        url: "https://viefaucet.com?r=662650f146e395ce252b194e"
     },
     {
-        name: "Pick Sites",
-        category: "faucet",
-        subCategory: "FAUCET NETWORK",
-        iconText: "P",
-        iconBg: "#154360",
-        badge1: { text: "10 GIFTS", type: "orange", icon: "fa-gift" },
+        name: "RewardJoy",
+        category: "offers",
+        subCategory: "PTC & OFFERS",
+        iconText: "RJ",
+        iconBg: "#E67E22",
+        badge1: { text: "HOT", type: "orange", icon: "fa-fire" },
         badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
-        tagline: "GET PAID FOR SURVEYS AND OFFERS!",
-        highlight: "Claim up to $10 per faucet claim!",
+        tagline: "5 CONTESTS • $12,000 TOTAL PRIZES",
+        highlight: "Get up to $150 per offer - Join!",
         features: [
-            "Verify Email & Get 10 Bonus Rolls",
-            "Multiply rewards up to 4,850x"
+            "Earn up to $0.03 per PTC ad view",
+            "LVL up & boost reward up to 15%"
         ],
-        metaLabel: "CLAIMABLE:",
-        metaValue: "10 Coins",
-        metaIcon: "fa-circle-dollar-to-slot",
-        btnIcon: "fa-gift",
+        metaLabel: "WITHDRAW TO:",
+        metaValue: "FaucetPay",
+        metaIcon: "fa-wallet",
+        btnIcon: "fa-arrow-up-right-from-square",
         btnStyle: "dark",
-        url: "https://example.com/picksites"
+        url: "https://www.rewardjoy.com/?r=mddulalhosen6"
     },
     {
-        name: "FMatrix",
-        category: "faucet",
-        subCategory: "FAUCET NETWORK",
-        iconText: "FM",
-        iconBg: "#117A65",
-        badge1: { text: "12 Coins", type: "orange", icon: "fa-coins" },
-        badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
-        tagline: "GET PAID FOR SURVEYS AND OFFERS!",
-        highlight: "Claim up to $25 per faucet claim!",
-        features: [
-            "Weekly wagering contest - live!",
-            "Level up & earn higher rewards"
-        ],
-        metaLabel: "CLAIMABLE:",
-        metaValue: "12 Coins",
-        metaIcon: "fa-circle-dollar-to-slot",
-        btnIcon: "fa-gift",
-        btnStyle: "dark",
-        url: "https://example.com/fmatrix"
-    },
-    {
-        name: "TronClick",
-        category: "faucet",
-        subCategory: "FAUCET & GAMES",
-        iconText: "TC",
-        iconBg: "#2ECC71",
+        name: "Rewards Official Bot",
+        category: "offers",
+        subCategory: "TELEGRAM BOT",
+        iconText: "TG",
+        iconBg: "#0088CC",
         badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
         badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
-        tagline: "GET PAID FOR SURVEYS AND OFFERS!",
-        highlight: "Claim up to $8 in TRX every hour",
+        tagline: "EARN REWARDS ON TELEGRAM!",
+        highlight: "Complete simple bot tasks & bonuses",
         features: [
-            "Verify Email & Get 10 Bonus Rolls",
-            "Multiply rewards up to 4,850x"
+            "Fast task verification & updates",
+            "Direct Telegram bot access"
         ],
-        metaLabel: "WITHDRAW TO:",
-        metaValue: "MEXC / FP",
-        metaIcon: "fa-wallet",
-        btnIcon: "fa-gift",
+        metaLabel: "PLATFORM:",
+        metaValue: "Telegram",
+        metaIcon: "fa-paper-plane",
+        btnIcon: "fa-arrow-up-right-from-square",
         btnStyle: "dark",
-        url: "https://example.com/tronclick"
+        url: "https://t.me/rewardsofficials_bot"
     },
     {
-        name: "TimeBucks",
-        category: "offers",
-        subCategory: "PTC & TASKS",
-        iconText: "TB",
-        iconBg: "#27AE60",
-        badge1: { text: "$1 GIFT", type: "orange", icon: "fa-gift" },
-        badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
-        tagline: "EARN BY COMPLETING SIMPLE TASKS!",
-        highlight: "Sign Up & Verify Bonus up to $1",
+        name: "Feyorra",
+        category: "faucet",
+        subCategory: "FAUCET & EARN",
+        iconText: "FY",
+        iconBg: "#8E44AD",
+        badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
+        badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
+        tagline: "CLAIM FREE CRYPTO FAUCET!",
+        highlight: "Earn crypto with faucet & tasks",
         features: [
-            "PTC ads - Offerwalls - Games",
-            "Daily Streak - Up to $11 per day!"
+            "Easy claims & quick rewards",
+            "Multiple earning options available"
         ],
         metaLabel: "WITHDRAW TO:",
-        metaValue: "AirTM / Crypto",
+        metaValue: "Crypto / FP",
         metaIcon: "fa-wallet",
+        btnIcon: "fa-arrow-up-right-from-square",
+        btnStyle: "dark",
+        url: "https://feyorra.top/?r=764701"
+    },
+    {
+        name: "EarnFreeCoin",
+        category: "faucet",
+        subCategory: "FAUCET & PTC",
+        iconText: "EF",
+        iconBg: "#27AE60",
+        badge1: { text: "TOP", type: "orange", icon: "fa-fire" },
+        badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
+        tagline: "EARN FREE COINS EVERY DAY!",
+        highlight: "Faucet claims, PTC & shortlinks",
+        features: [
+            "Low minimum withdrawal limit",
+            "Bonus rewards for active users"
+        ],
+        metaLabel: "WITHDRAW TO:",
+        metaValue: "Crypto / FP",
+        metaIcon: "fa-wallet",
+        btnIcon: "fa-arrow-up-right-from-square",
+        btnStyle: "dark",
+        url: "https://earnfreecoin.com/ref/9HKE54"
+    },
+    {
+        name: "LTCLux",
+        category: "faucet",
+        subCategory: "LTC FAUCET",
+        iconText: "LL",
+        iconBg: "#345D9D",
+        badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
+        badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
+        tagline: "CLAIM FREE LITECOIN (LTC)!",
+        highlight: "Hourly LTC faucet & bonus rolls",
+        features: [
+            "Verify email & claim bonus rolls",
+            "Multiply your rewards easily"
+        ],
+        metaLabel: "CLAIMABLE:",
+        metaValue: "Free LTC",
+        metaIcon: "fa-coins",
         btnIcon: "fa-gift",
         btnStyle: "dark",
-        url: "https://example.com/timebucks"
+        url: "https://ltclux.io/?ref=mddulal596"
+    },
+    {
+        name: "LTCPool",
+        category: "faucet",
+        subCategory: "LTC EARNING",
+        iconText: "LP",
+        iconBg: "#2980B9",
+        badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
+        badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
+        tagline: "LITECOIN REWARDS & TASKS!",
+        highlight: "Earn LTC through claims & offers",
+        features: [
+            "Smooth interface & fast payouts",
+            "Referral commission rewards"
+        ],
+        metaLabel: "REWARD IN:",
+        metaValue: "Litecoin (LTC)",
+        metaIcon: "fa-coins",
+        btnIcon: "fa-arrow-up-right-from-square",
+        btnStyle: "dark",
+        url: "https://ltcpool.io/?ref=2N5PWMRG"
+    },
+    {
+        name: "FaucetArena",
+        category: "faucet",
+        subCategory: "FAUCET & GAMES",
+        iconText: "FA",
+        iconBg: "#C0392B",
+        badge1: { text: "TOP", type: "orange", icon: "fa-fire" },
+        badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
+        tagline: "FAUCET, PTC & MINI GAMES!",
+        highlight: "Claim rewards & complete tasks",
+        features: [
+            "PTC ads, offers & daily bonuses",
+            "Simple and fast earning system"
+        ],
+        metaLabel: "WITHDRAW TO:",
+        metaValue: "FaucetPay",
+        metaIcon: "fa-wallet",
+        btnIcon: "fa-arrow-up-right-from-square",
+        btnStyle: "dark",
+        url: "https://faucetarena.com/signup?ref=75354ead"
+    },
+    {
+        name: "LTCMiner",
+        category: "watch",
+        subCategory: "LTC MINING",
+        iconText: "LM",
+        iconBg: "#1B4F72",
+        badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
+        badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
+        tagline: "LITECOIN MINING & REWARDS!",
+        highlight: "Start earning LTC effortlessly",
+        features: [
+            "Track your LTC balance easily",
+            "Bonus & referral opportunities"
+        ],
+        metaLabel: "COIN:",
+        metaValue: "Litecoin (LTC)",
+        metaIcon: "fa-coins",
+        btnIcon: "fa-arrow-up-right-from-square",
+        btnStyle: "dark",
+        url: "https://ltcminer.com/831970"
+    },
+    {
+        name: "DropDoge",
+        category: "faucet",
+        subCategory: "DOGE FAUCET",
+        iconText: "DD",
+        iconBg: "#BA9F33",
+        badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
+        badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
+        tagline: "CLAIM FREE DOGECOIN (DOGE)!",
+        highlight: "Hourly Doge faucet & bonus rolls",
+        features: [
+            "Boost rewards with points & rolls",
+            "Regular claims & contests"
+        ],
+        metaLabel: "CLAIMABLE:",
+        metaValue: "Free DOGE",
+        metaIcon: "fa-coins",
+        btnIcon: "fa-gift",
+        btnStyle: "dark",
+        url: "https://dropdoge.io/?ref=mddulalhosen0"
+    },
+    {
+        name: "PepeLux",
+        category: "faucet",
+        subCategory: "PEPE FAUCET",
+        iconText: "PL",
+        iconBg: "#2E7D32",
+        badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
+        badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
+        tagline: "CLAIM FREE PEPE TOKENS!",
+        highlight: "Faucet claims & bonus rolls",
+        features: [
+            "Verify email & get bonus rolls",
+            "Multiply rewards up to high tiers"
+        ],
+        metaLabel: "CLAIMABLE:",
+        metaValue: "Free PEPE",
+        metaIcon: "fa-coins",
+        btnIcon: "fa-gift",
+        btnStyle: "dark",
+        url: "https://pepelux.io/?ref=mddulal596"
+    },
+    {
+        name: "DropBNB",
+        category: "faucet",
+        subCategory: "BNB FAUCET",
+        iconText: "DB",
+        iconBg: "#F3BA2F",
+        badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
+        badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
+        tagline: "CLAIM FREE BNB REWARDS!",
+        highlight: "Hourly BNB faucet & bonus rolls",
+        features: [
+            "Claim free BNB & boost points",
+            "Easy and fast claim system"
+        ],
+        metaLabel: "CLAIMABLE:",
+        metaValue: "Free BNB",
+        metaIcon: "fa-coins",
+        btnIcon: "fa-gift",
+        btnStyle: "dark",
+        url: "https://dropbnb.io/?ref=mddulalhosen0"
+    },
+    {
+        name: "FreeSolana",
+        category: "faucet",
+        subCategory: "SOLANA FAUCET",
+        iconText: "FS",
+        iconBg: "#9945FF",
+        badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
+        badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
+        tagline: "CLAIM FREE SOLANA (SOL)!",
+        highlight: "Earn free SOL with claims & tasks",
+        features: [
+            "Simple claim process for beginners",
+            "Instant referral link support"
+        ],
+        metaLabel: "CLAIMABLE:",
+        metaValue: "Free SOL",
+        metaIcon: "fa-coins",
+        btnIcon: "fa-arrow-up-right-from-square",
+        btnStyle: "dark",
+        url: "https://freesolana.top/?r=212925"
     }
 ];
 
