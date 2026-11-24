@@ -118,29 +118,39 @@ html, body {
     transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
-.bonus-pill:hover {
+.bonus-pill:hover,
+.bonus-pill:active {
     background: var(--accent-orange-hover);
 }
 
+/* Menu Bar Toggle Button - Orange */
 .drawer-toggle {
-    background: var(--btn-teal-blue);
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-bright));
+    border: 1px solid rgba(255, 255, 255, 0.35);
     color: #FFFFFF;
-    width: 34px;
-    height: 34px;
+    width: 36px;
+    height: 36px;
     border-radius: 9px;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
     flex-shrink: 0;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background 0.2s ease;
+    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.4);
+    transition: background 0.18s ease, transform 0.15s ease, box-shadow 0.18s ease;
 }
 
 .drawer-toggle:hover {
-    background: var(--btn-teal-blue-hover);
+    background: linear-gradient(135deg, var(--accent-orange-bright), var(--accent-orange-hover));
+    transform: translateY(-1px);
+}
+
+.drawer-toggle:active {
+    background: var(--accent-orange-hover);
+    transform: scale(0.96);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.45);
 }
 
 /* Slide-out Navigation Drawer */
@@ -170,7 +180,7 @@ html, body {
     padding: 18px 16px;
     transition: right 0.28s cubic-bezier(0.22, 1, 0.36, 1);
     overflow-y: auto;
-    border-left: 3px solid var(--header-green);
+    border-left: 3px solid var(--accent-orange);
     box-shadow: -8px 0 24px rgba(15, 23, 42, 0.15);
 }
 
@@ -192,7 +202,7 @@ html, body {
 }
 
 .drawer-close {
-    background: var(--btn-red);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-bright));
     border: none;
     color: #FFFFFF;
     width: 32px;
@@ -200,6 +210,12 @@ html, body {
     border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
+    transition: background 0.18s ease;
+}
+
+.drawer-close:hover,
+.drawer-close:active {
+    background: var(--accent-orange-hover);
 }
 
 .drawer-section {
@@ -217,13 +233,14 @@ html, body {
     padding: 0 4px 2px;
 }
 
+/* Drawer Menu Links - Orange */
 .drawer-link {
-    background: var(--btn-teal-blue);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-bright));
     border: none;
     color: #FFFFFF;
     text-decoration: none;
     font-size: 12.5px;
-    font-weight: 600;
+    font-weight: 700;
     padding: 9px 12px;
     border-radius: 8px;
     display: flex;
@@ -231,11 +248,24 @@ html, body {
     gap: 10px;
     text-align: left;
     cursor: pointer;
-    transition: background 0.18s ease;
+    box-shadow: 0 2px 6px rgba(234, 88, 12, 0.22);
+    transition: background 0.18s ease, transform 0.15s ease;
+}
+
+.drawer-link i {
+    width: 16px;
+    text-align: center;
+    color: #FFFFFF !important;
 }
 
 .drawer-link:hover {
-    background: var(--btn-teal-blue-hover);
+    background: linear-gradient(135deg, var(--accent-orange-bright), var(--accent-orange-hover));
+    transform: translateX(-2px);
+}
+
+.drawer-link:active {
+    background: var(--accent-orange-hover);
+    transform: scale(0.98);
 }
 
 /* Search & Filter Toolbar */
@@ -632,7 +662,8 @@ html, body {
     background: var(--accent-orange);
 }
 
-.accent-action:hover {
+.accent-action:hover,
+.accent-action:active {
     background: var(--accent-orange-hover);
 }
 
