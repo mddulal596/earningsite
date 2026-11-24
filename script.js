@@ -338,11 +338,19 @@ const earningSites = [
 ];
 
 let currentCategory = 'all';
-let favorites = JSON.parse(localStorage.getItem('earningSiteFavs')) || [];
+let favorites = [];
+
+try {
+    favorites = JSON.parse(localStorage.getItem('earningSiteFavs')) || [];
+} catch (err) {
+    favorites = [];
+}
 
 function updateFavCounts() {
-    document.getElementById('favCount').textContent = favorites.length;
-    document.getElementById('menuFavCount').textContent = favorites.length;
+    const favCountEl = document.getElementById('favCount');
+    const menuFavCountEl = document.getElementById('menuFavCount');
+    if (favCountEl) favCountEl.textContent = favorites.length;
+    if (menuFavCountEl) menuFavCountEl.textContent = favorites.length;
 }
 
 function toggleFavorite(siteName) {
@@ -351,17 +359,22 @@ function toggleFavorite(siteName) {
     } else {
         favorites.push(siteName);
     }
-    localStorage.setItem('earningSiteFavs', JSON.stringify(favorites));
+    try {
+        localStorage.setItem('earningSiteFavs', JSON.stringify(favorites));
+    } catch (err) {
+        // Ignore storage errors in restricted browser modes
+    }
     updateFavCounts();
     filterSites();
 }
 
 function renderCards(sites) {
     const container = document.getElementById('cardsContainer');
+    if (!container) return;
     container.innerHTML = '';
 
     if (sites.length === 0) {
-        container.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; padding: 32px; color: #71717A; font-size: 13px;">No matching sites found.</p>`;
+        container.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; padding: 32px; color: #64748B; font-size: 13px;">No matching sites found.</p>`;
         return;
     }
 
@@ -409,11 +422,11 @@ function renderCards(sites) {
 
                 <div>
                     <div class="card-tools">
-                        <button type="button" class="tool-btn" onclick="openTipsModal('${site.name}')">
+                        <button type="button" class="tool-btn" onclick="openTipsModal('${site.name.replace(/'/g, "\\'")}')">
                             <i class="fa-solid fa-circle-info"></i> Tips
                         </button>
-                        <button type="button" class="tool-btn ${isFav ? 'saved' : ''}" onclick="toggleFavorite('${site.name}')">
-                            <i class="fa-${isFav ? 'solid' : 'regular'} fa-heart"></i> ${isFav ? 'Saved' : 'Save'}
+                        <button type="button" class="tool-btn ${isFav ? 'saved' : ''}" onclick="toggleFavorite('${site.name.replace(/'/g, "\\'")}')">
+                            <i class="fa-solid fa-heart"></i> ${isFav ? 'Saved' : 'Save'}
                         </button>
                     </div>
 
@@ -447,7 +460,8 @@ function menuFilter(category) {
     const buttons = document.querySelectorAll('.chip-btn');
     buttons.forEach(btn => {
         btn.classList.remove('active');
-        if (btn.getAttribute('onclick').includes(`'${category}'`)) {
+        const onclickAttr = btn.getAttribute('onclick') || '';
+        if (onclickAttr.includes(`'${category}'`)) {
             btn.classList.add('active');
         }
     });
@@ -456,7 +470,9 @@ function menuFilter(category) {
 }
 
 function filterSites() {
-    const searchText = document.getElementById('searchInput').value.toLowerCase();
+    const searchInput = document.getElementById('searchInput');
+    const searchText = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
     const filtered = earningSites.filter(site => {
         const matchesCategory =
             currentCategory === 'all' ||
@@ -464,23 +480,29 @@ function filterSites() {
             site.category === currentCategory;
 
         const matchesSearch =
+            !searchText ||
             site.name.toLowerCase().includes(searchText) ||
             site.highlight.toLowerCase().includes(searchText) ||
-            site.subCategory.toLowerCase().includes(searchText);
+            site.subCategory.toLowerCase().includes(searchText) ||
+            site.metaValue.toLowerCase().includes(searchText);
 
         return matchesCategory && matchesSearch;
     });
+
     renderCards(filtered);
 }
 
 function toggleMenu() {
-    document.getElementById('sideMenu').classList.toggle('active');
-    document.getElementById('menuOverlay').classList.toggle('active');
+    const sideMenu = document.getElementById('sideMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    if (sideMenu) sideMenu.classList.toggle('active');
+    if (menuOverlay) menuOverlay.classList.toggle('active');
 }
 
 function openTipsModal(siteName) {
     const site = earningSites.find(s => s.name === siteName);
     if (!site) return;
+
     document.getElementById('tipsModalTitle').textContent = `${site.name} - Quick Tips`;
     document.getElementById('tipsModalBody').innerHTML = `
         <p><b>Category:</b> ${site.subCategory}</p>
@@ -494,11 +516,13 @@ function openTipsModal(siteName) {
 }
 
 function openGiftModal() {
-    document.getElementById('giftModal').classList.add('active');
+    const giftModal = document.getElementById('giftModal');
+    if (giftModal) giftModal.classList.add('active');
 }
 
 function closeModal(modalId) {
-    document.getElementById(modalId).classList.remove('active');
+    const modal = document.getElementById(modalId);
+    if (modal) modal.classList.remove('active');
 }
 
 updateFavCounts();
