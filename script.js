@@ -1,4 +1,3 @@
-// এখানে সাইটের নাম, তথ্য এবং আপনার রেফারেল লিংকগুলো যুক্ত করা হয়েছে
 const earningSites = [
     {
         name: "FaucetPay",
@@ -14,6 +13,7 @@ const earningSites = [
             "PTC, Offerwall, Surveys, Games",
             "Instant crypto payouts & faucet list"
         ],
+        tips: "Most faucet sites pay directly to FaucetPay with zero or very low fees. Create your account first and copy your deposit addresses.",
         metaLabel: "WITHDRAW TO:",
         metaValue: "Crypto Wallet",
         metaIcon: "fa-wallet",
@@ -35,6 +35,7 @@ const earningSites = [
             "PTC ads - Offers - Videos - Slinks",
             "Withdraw from just $0.01 - Instant"
         ],
+        tips: "Complete daily PTC ads and shortlinks first to reach the $0.01 minimum withdrawal in minutes.",
         metaLabel: "WITHDRAW TO:",
         metaValue: "FaucetPay",
         metaIcon: "fa-wallet",
@@ -56,6 +57,7 @@ const earningSites = [
             "PTC ads - Offers - Slinks - Tasks",
             "Boost your level and earn more!"
         ],
+        tips: "Collect ACP (Auto Claim Points) from daily bonuses and shortlinks, then run the Auto Faucet in the background.",
         metaLabel: "PAYMENT PROOF:",
         metaValue: "+ $30",
         metaIcon: "fa-coins",
@@ -77,6 +79,7 @@ const earningSites = [
             "View ads & complete shortlinks",
             "Daily bonus, challenges & offers"
         ],
+        tips: "Claim the faucet every 4 minutes and complete daily challenges for extra token multipliers.",
         metaLabel: "WITHDRAW TO:",
         metaValue: "FaucetPay",
         metaIcon: "fa-wallet",
@@ -98,12 +101,13 @@ const earningSites = [
             "Earn up to $0.03 per PTC ad view",
             "LVL up & boost reward up to 15%"
         ],
+        tips: "Focus on high-paying Offerwalls and daily PTC ads to level up your account for permanent reward boosts.",
         metaLabel: "WITHDRAW TO:",
         metaValue: "FaucetPay",
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
         btnStyle: "dark",
-        url: "https://www.rewardjoy.com/?r=mddulalhosen6"
+        url: "https://www.rewardjoy.com/?r=mddulal596"
     },
     {
         name: "Rewards Official Bot",
@@ -119,6 +123,7 @@ const earningSites = [
             "Fast task verification & updates",
             "Direct Telegram bot access"
         ],
+        tips: "Open the bot in Telegram, click Start, and check daily tasks for quick rewards.",
         metaLabel: "PLATFORM:",
         metaValue: "Telegram",
         metaIcon: "fa-paper-plane",
@@ -140,6 +145,7 @@ const earningSites = [
             "Easy claims & quick rewards",
             "Multiple earning options available"
         ],
+        tips: "Use the faucet regularly and withdraw directly to your FaucetPay wallet.",
         metaLabel: "WITHDRAW TO:",
         metaValue: "Crypto / FP",
         metaIcon: "fa-wallet",
@@ -161,6 +167,7 @@ const earningSites = [
             "Low minimum withdrawal limit",
             "Bonus rewards for active users"
         ],
+        tips: "Check the PTC section daily for easy clicks with no timer hassle.",
         metaLabel: "WITHDRAW TO:",
         metaValue: "Crypto / FP",
         metaIcon: "fa-wallet",
@@ -182,6 +189,7 @@ const earningSites = [
             "Verify email & claim bonus rolls",
             "Multiply your rewards easily"
         ],
+        tips: "Verify your email right after signing up to get free bonus rolls!",
         metaLabel: "CLAIMABLE:",
         metaValue: "Free LTC",
         metaIcon: "fa-coins",
@@ -203,6 +211,7 @@ const earningSites = [
             "Smooth interface & fast payouts",
             "Referral commission rewards"
         ],
+        tips: "Combine hourly claims with offerwall tasks to reach withdrawal faster.",
         metaLabel: "REWARD IN:",
         metaValue: "Litecoin (LTC)",
         metaIcon: "fa-coins",
@@ -224,6 +233,7 @@ const earningSites = [
             "PTC ads, offers & daily bonuses",
             "Simple and fast earning system"
         ],
+        tips: "Log in daily to keep your bonus streak active.",
         metaLabel: "WITHDRAW TO:",
         metaValue: "FaucetPay",
         metaIcon: "fa-wallet",
@@ -245,6 +255,7 @@ const earningSites = [
             "Track your LTC balance easily",
             "Bonus & referral opportunities"
         ],
+        tips: "Enter your LTC address from FaucetPay to start tracking your free plan.",
         metaLabel: "COIN:",
         metaValue: "Litecoin (LTC)",
         metaIcon: "fa-coins",
@@ -266,6 +277,7 @@ const earningSites = [
             "Boost rewards with points & rolls",
             "Regular claims & contests"
         ],
+        tips: "Claim every hour and save your points for higher-tier rolls.",
         metaLabel: "CLAIMABLE:",
         metaValue: "Free DOGE",
         metaIcon: "fa-coins",
@@ -287,6 +299,7 @@ const earningSites = [
             "Verify email & get bonus rolls",
             "Multiply rewards up to high tiers"
         ],
+        tips: "Verify your email to unlock extra free PEPE rolls.",
         metaLabel: "CLAIMABLE:",
         metaValue: "Free PEPE",
         metaIcon: "fa-coins",
@@ -308,6 +321,7 @@ const earningSites = [
             "Claim free BNB & boost points",
             "Easy and fast claim system"
         ],
+        tips: "Claim hourly and participate in weekly contests for extra BNB.",
         metaLabel: "CLAIMABLE:",
         metaValue: "Free BNB",
         metaIcon: "fa-coins",
@@ -329,6 +343,7 @@ const earningSites = [
             "Simple claim process for beginners",
             "Instant referral link support"
         ],
+        tips: "Complete quick faucet claims and shortlinks to stack free SOL.",
         metaLabel: "CLAIMABLE:",
         metaValue: "Free SOL",
         metaIcon: "fa-coins",
@@ -339,15 +354,38 @@ const earningSites = [
 ];
 
 let currentCategory = 'all';
+let favorites = JSON.parse(localStorage.getItem('earningSiteFavs')) || [];
+
+function updateFavCounts() {
+    document.getElementById('favCount').textContent = favorites.length;
+    document.getElementById('menuFavCount').textContent = favorites.length;
+}
+
+function toggleFavorite(siteName) {
+    if (favorites.includes(siteName)) {
+        favorites = favorites.filter(name => name !== siteName);
+    } else {
+        favorites.push(siteName);
+    }
+    localStorage.setItem('earningSiteFavs', JSON.stringify(favorites));
+    updateFavCounts();
+    filterSites();
+}
 
 function renderCards(sites) {
     const container = document.getElementById('cardsContainer');
     container.innerHTML = '';
 
+    if (sites.length === 0) {
+        container.innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 30px; color: #777; font-size: 13px;">No sites found here. Try another filter or add favorites!</p>`;
+        return;
+    }
+
     sites.forEach(site => {
         const badge1Class = site.badge1.type === 'orange' ? 'badge-orange' : 'badge-purple';
         const badge2Class = site.badge2.type === 'contest' ? 'badge-contest' : 'badge-purple';
         const btnClass = site.btnStyle === 'brown' ? 'earn-btn brown' : 'earn-btn';
+        const isFav = favorites.includes(site.name);
 
         const cardHTML = `
             <div class="card">
@@ -386,16 +424,27 @@ function renderCards(sites) {
                     </ul>
                 </div>
 
-                <div class="card-footer">
-                    <div class="meta-info">
-                        <span class="meta-label">${site.metaLabel}</span>
-                        <span class="meta-pill">
-                            <i class="fa-solid ${site.metaIcon}"></i> ${site.metaValue}
-                        </span>
+                <div>
+                    <div class="card-actions">
+                        <button class="action-icon-btn" onclick="openTipsModal('${site.name}')">
+                            <i class="fa-solid fa-circle-info"></i> Tips
+                        </button>
+                        <button class="action-icon-btn fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${site.name}')">
+                            <i class="fa-${isFav ? 'solid' : 'regular'} fa-heart"></i> ${isFav ? 'Saved' : 'Save'}
+                        </button>
                     </div>
-                    <a href="${site.url}" target="_blank" rel="noopener noreferrer" class="${btnClass}">
-                        EARN NOW <i class="fa-solid ${site.btnIcon}"></i>
-                    </a>
+
+                    <div class="card-footer">
+                        <div class="meta-info">
+                            <span class="meta-label">${site.metaLabel}</span>
+                            <span class="meta-pill">
+                                <i class="fa-solid ${site.metaIcon}"></i> ${site.metaValue}
+                            </span>
+                        </div>
+                        <a href="${site.url}" target="_blank" rel="noopener noreferrer" class="${btnClass}">
+                            EARN NOW <i class="fa-solid ${site.btnIcon}"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         `;
@@ -406,21 +455,71 @@ function renderCards(sites) {
 function setCategory(category, btnElement) {
     currentCategory = category;
     document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-    btnElement.classList.add('active');
+    if (btnElement) btnElement.classList.add('active');
+    filterSites();
+}
+
+function menuFilter(category) {
+    toggleMenu();
+    const buttons = document.querySelectorAll('.filter-btn');
+    buttons.forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('onclick').includes(`'${category}'`)) {
+            btn.classList.add('active');
+        }
+    });
+    currentCategory = category;
     filterSites();
 }
 
 function filterSites() {
     const searchText = document.getElementById('searchInput').value.toLowerCase();
     const filtered = earningSites.filter(site => {
-        const matchesCategory = currentCategory === 'all' || site.category === currentCategory;
-        const matchesSearch = site.name.toLowerCase().includes(searchText) || 
-                              site.highlight.toLowerCase().includes(searchText) ||
-                              site.subCategory.toLowerCase().includes(searchText);
+        const matchesCategory =
+            currentCategory === 'all' ||
+            (currentCategory === 'favorites' && favorites.includes(site.name)) ||
+            site.category === currentCategory;
+
+        const matchesSearch =
+            site.name.toLowerCase().includes(searchText) ||
+            site.highlight.toLowerCase().includes(searchText) ||
+            site.subCategory.toLowerCase().includes(searchText);
+
         return matchesCategory && matchesSearch;
     });
     renderCards(filtered);
 }
 
-// পেজ লোড হলে কার্ডগুলো দেখাবে
+// Slide-out Menu Toggle
+function toggleMenu() {
+    document.getElementById('sideMenu').classList.toggle('active');
+    document.getElementById('menuOverlay').classList.toggle('active');
+}
+
+// Modals
+function openTipsModal(siteName) {
+    const site = earningSites.find(s => s.name === siteName);
+    if (!site) return;
+    document.getElementById('tipsModalTitle').textContent = `${site.name} - Quick Tips`;
+    document.getElementById('tipsModalBody').innerHTML = `
+        <p style="margin-bottom: 10px;"><b>Category:</b> ${site.subCategory}</p>
+        <p style="margin-bottom: 10px;"><b>Withdraw:</b> ${site.metaValue}</p>
+        <p style="background: #FAF2E1; padding: 10px; border-radius: 8px; color: #4A3818;">
+            💡 <b>Tip:</b> ${site.tips}
+        </p>
+    `;
+    document.getElementById('tipsModalLink').href = site.url;
+    document.getElementById('tipsModal').classList.add('active');
+}
+
+function openGiftModal() {
+    document.getElementById('giftModal').classList.add('active');
+}
+
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.remove('active');
+}
+
+// Initial Load
+updateFavCounts();
 renderCards(earningSites);
