@@ -1,21 +1,25 @@
 :root {
-    --bg-canvas: #F4F1EA;
+    --bg-canvas: #F4F7F5;
     --surface-card: #FFFFFF;
-    --surface-warm: #FAF3E3;
-    --surface-subtle: #F8F6F1;
-    --nav-dark: #1A120B;
-    --nav-surface: #261B12;
-    --ink-primary: #18181B;
-    --ink-secondary: #52525B;
-    --ink-muted: #71717A;
-    --accent: #EA580C;
-    --accent-hover: #C2410C;
-    --gold-pill-bg: #271A10;
+    --surface-warm: #FFF7ED;
+    --surface-subtle: #F1F5F9;
+    --header-green: #0F766E;
+    --header-green-dark: #115E59;
+    --footer-green: #0D5C56;
+    --ink-primary: #0F172A;
+    --ink-secondary: #334155;
+    --ink-muted: #64748B;
+    --accent-orange: #EA580C;
+    --accent-orange-bright: #F97316;
+    --accent-orange-hover: #C2410C;
+    --btn-teal-blue: linear-gradient(135deg, #059669 0%, #0284C7 100%);
+    --btn-teal-blue-hover: linear-gradient(135deg, #047857 0%, #0369A1 100%);
+    --gold-pill-bg: #1E293B;
     --gold-pill-text: #FBBF24;
-    --border-soft: #E5DEC9;
-    --border-card: rgba(24, 24, 27, 0.08);
-    --shadow-card: 0 2px 10px rgba(24, 24, 27, 0.04);
-    --shadow-hover: 0 8px 20px rgba(24, 24, 27, 0.09);
+    --border-soft: #CBD5E1;
+    --border-card: rgba(15, 23, 42, 0.08);
+    --shadow-card: 0 2px 10px rgba(15, 23, 42, 0.05);
+    --shadow-hover: 0 8px 22px rgba(15, 23, 42, 0.1);
 }
 
 * {
@@ -32,23 +36,24 @@ body {
     display: flex;
     flex-direction: column;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
 }
 
-/* Header */
+/* Header - Green Background, Orange Accent Preserved */
 .site-header {
-    background-color: var(--nav-dark);
+    background: linear-gradient(90deg, var(--header-green-dark), var(--header-green));
     color: #FFFFFF;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+    border-bottom: 2px solid var(--accent-orange);
+    box-shadow: 0 4px 14px rgba(15, 118, 110, 0.18);
 }
 
 .header-inner {
-    max-width: 1140px;
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 12px 16px;
+    padding: 11px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,11 +78,12 @@ body {
     letter-spacing: -0.02em;
 }
 
+/* Orange Logo Badge */
 .brand-badge {
     width: 28px;
     height: 28px;
     border-radius: 8px;
-    background: linear-gradient(135deg, var(--accent), #F97316);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-bright));
     color: #FFFFFF;
     display: inline-flex;
     align-items: center;
@@ -86,8 +92,9 @@ body {
     box-shadow: 0 2px 8px rgba(234, 88, 12, 0.35);
 }
 
+/* Orange Welcome Gift Pill */
 .bonus-pill {
-    background: linear-gradient(135deg, #EA580C, #F97316);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-orange-bright));
     color: #FFFFFF;
     border: none;
     border-radius: 999px;
@@ -99,39 +106,42 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
 .bonus-pill:hover {
+    background: var(--accent-orange-hover);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.4);
 }
 
+/* Green-Blue Button Style for Header Menu / Home Toggle */
 .drawer-toggle {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: var(--btn-teal-blue);
+    border: 1px solid rgba(255, 255, 255, 0.22);
     color: #FFFFFF;
     width: 36px;
     height: 36px;
     border-radius: 9px;
-    font-size: 16px;
+    font-size: 15px;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, transform 0.15s ease;
 }
 
 .drawer-toggle:hover {
-    background: rgba(255, 255, 255, 0.16);
+    background: var(--btn-teal-blue-hover);
+    transform: translateY(-1px);
 }
 
-/* Slide-out Drawer */
+/* Slide-out Navigation Drawer */
 .drawer-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(15, 10, 6, 0.58);
+    background: rgba(15, 23, 42, 0.45);
     backdrop-filter: blur(2px);
     z-index: 200;
     display: none;
@@ -148,13 +158,14 @@ body {
     width: 280px;
     max-width: 85vw;
     height: 100vh;
-    background: var(--nav-dark);
-    color: #FFFFFF;
+    background: #FFFFFF;
+    color: var(--ink-primary);
     z-index: 201;
     padding: 18px 16px;
     transition: right 0.28s cubic-bezier(0.22, 1, 0.36, 1);
     overflow-y: auto;
-    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 3px solid var(--header-green);
+    box-shadow: -8px 0 24px rgba(15, 23, 42, 0.15);
 }
 
 .nav-drawer.active {
@@ -167,76 +178,75 @@ body {
     justify-content: space-between;
     padding-bottom: 14px;
     margin-bottom: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.drawer-top .brand-logo {
+    color: var(--ink-primary);
 }
 
 .drawer-close {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--btn-teal-blue);
     border: none;
     color: #FFFFFF;
     width: 32px;
     height: 32px;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .drawer-section {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 6px;
 }
 
 .drawer-label {
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: 0.08em;
-    color: #A1A1AA;
-    padding: 0 8px 4px;
+    color: var(--ink-muted);
+    padding: 0 4px 2px;
 }
 
 .drawer-link {
-    background: transparent;
+    background: var(--btn-teal-blue);
     border: none;
-    color: #F4F4F5;
+    color: #FFFFFF;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 600;
-    padding: 9px 10px;
+    padding: 9px 12px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     gap: 10px;
     text-align: left;
     cursor: pointer;
-    transition: background 0.18s ease, color 0.18s ease;
-}
-
-.drawer-link i {
-    width: 16px;
-    text-align: center;
-    color: #D4D4D8;
+    transition: background 0.18s ease, transform 0.15s ease;
 }
 
 .drawer-link:hover {
-    background: var(--nav-surface);
-    color: #FFFFFF;
+    background: var(--btn-teal-blue-hover);
+    transform: translateX(-2px);
 }
 
 /* Search & Filter Toolbar */
 .toolbar-wrap {
-    max-width: 1140px;
+    max-width: 1180px;
     width: 100%;
     margin: 16px auto 4px;
     padding: 0 14px;
 }
 
 .toolbar-inner {
-    background: rgba(255, 255, 255, 0.65);
-    border: 1px solid var(--border-soft);
+    background: var(--surface-card);
+    border: 1px solid var(--border-card);
     border-radius: 14px;
     padding: 10px 12px;
+    box-shadow: var(--shadow-card);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -272,8 +282,8 @@ body {
 }
 
 .search-field input:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.12);
+    border-color: #0284C7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.14);
 }
 
 .filter-group {
@@ -283,34 +293,39 @@ body {
     padding-bottom: 2px;
 }
 
+/* Filter Chip Buttons - Green-Blue Theme */
 .chip-btn {
-    background: #FFFFFF;
-    border: 1px solid var(--border-soft);
-    color: var(--ink-primary);
+    background: var(--btn-teal-blue);
+    border: none;
+    color: #FFFFFF;
     padding: 7px 12px;
     border-radius: 9px;
     font-size: 11px;
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
+    opacity: 0.86;
     transition: all 0.18s ease;
 }
 
 .chip-btn:hover {
-    border-color: var(--nav-dark);
+    opacity: 1;
+    background: var(--btn-teal-blue-hover);
 }
 
 .chip-btn.active {
-    background: var(--nav-dark);
-    color: #FFFFFF;
-    border-color: var(--nav-dark);
+    opacity: 1;
+    background: var(--btn-teal-blue-hover);
+    box-shadow: 0 3px 10px rgba(2, 132, 199, 0.3);
+    outline: 2px solid #0F766E;
+    outline-offset: 1px;
 }
 
-/* Main Container & Grid */
+/* Main Container & Responsive Grid */
 .main-wrap {
-    max-width: 1140px;
+    max-width: 1180px;
     width: 100%;
-    margin: 12px auto 34px;
+    margin: 14px auto 34px;
     padding: 0 14px;
     flex: 1;
 }
@@ -321,10 +336,17 @@ body {
     gap: 12px;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 768px) {
     .cards-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
+    }
+}
+
+@media (min-width: 1120px) {
+    .cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
     }
 }
 
@@ -344,7 +366,7 @@ body {
 .site-card:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
-    border-color: rgba(234, 88, 12, 0.25);
+    border-color: rgba(2, 132, 199, 0.28);
 }
 
 .card-top {
@@ -410,8 +432,9 @@ body {
     white-space: nowrap;
 }
 
+/* Orange Badge Preserved */
 .pill-orange {
-    background: var(--accent);
+    background: var(--accent-orange);
     color: #FFFFFF;
 }
 
@@ -429,7 +452,7 @@ body {
 .card-subline {
     font-size: 9.5px;
     font-weight: 700;
-    color: #27272A;
+    color: #1E293B;
     text-transform: uppercase;
     margin-bottom: 7px;
     display: flex;
@@ -438,13 +461,13 @@ body {
 }
 
 .card-subline i {
-    color: #16A34A;
+    color: #059669;
 }
 
 .card-promo {
     background: var(--surface-warm);
-    border: 1px solid #F3E5C4;
-    color: #453214;
+    border: 1px solid #FED7AA;
+    color: #7C2D12;
     font-size: 10.5px;
     font-weight: 600;
     padding: 6px 8px;
@@ -471,7 +494,7 @@ body {
 
 .card-points li i {
     font-size: 9px;
-    color: #71717A;
+    color: #0284C7;
     width: 12px;
     text-align: center;
 }
@@ -484,29 +507,30 @@ body {
     margin-bottom: 8px;
 }
 
+/* Card Action Buttons (Tips & Save) - Green-Blue Background */
 .tool-btn {
-    background: var(--surface-subtle);
-    border: 1px solid #E4E4E7;
-    color: #3F3F46;
+    background: var(--btn-teal-blue);
+    border: none;
+    color: #FFFFFF;
     font-size: 10px;
-    font-weight: 600;
-    padding: 4px 8px;
+    font-weight: 700;
+    padding: 5px 9px;
     border-radius: 7px;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    transition: all 0.15s ease;
+    transition: background 0.18s ease, transform 0.15s ease;
 }
 
 .tool-btn:hover {
-    background: #EFECE6;
+    background: var(--btn-teal-blue-hover);
+    transform: translateY(-1px);
 }
 
 .tool-btn.saved {
-    color: #E11D48;
-    background: #FFF1F2;
-    border-color: #FECDD3;
+    background: linear-gradient(135deg, #047857 0%, #0369A1 100%);
+    box-shadow: 0 2px 6px rgba(2, 132, 199, 0.28);
 }
 
 .card-bottom {
@@ -515,7 +539,7 @@ body {
     justify-content: space-between;
     gap: 8px;
     padding-top: 8px;
-    border-top: 1px dashed #E4E4E7;
+    border-top: 1px dashed #E2E8F0;
 }
 
 .payout-box {
@@ -544,6 +568,7 @@ body {
     white-space: nowrap;
 }
 
+/* Primary & Accent Buttons - Green-Blue & Orange */
 .action-btn {
     text-decoration: none;
     color: #FFFFFF;
@@ -561,21 +586,22 @@ body {
 }
 
 .primary-action {
-    background: var(--nav-dark);
+    background: var(--btn-teal-blue);
     flex: 1;
     max-width: 138px;
 }
 
 .primary-action:hover {
-    background: var(--accent);
+    background: var(--btn-teal-blue-hover);
+    transform: translateY(-1px);
 }
 
 .accent-action {
-    background: var(--accent);
+    background: var(--accent-orange);
 }
 
 .accent-action:hover {
-    background: var(--accent-hover);
+    background: var(--accent-orange-hover);
 }
 
 .full-width {
@@ -585,21 +611,21 @@ body {
     font-size: 11.5px;
 }
 
-/* Professional Footer */
+/* Footer - Green Background, Orange Accent Preserved */
 .site-footer {
-    background-color: var(--nav-dark);
+    background: linear-gradient(90deg, var(--footer-green), var(--header-green));
     color: #FFFFFF;
-    border-top: 2px solid var(--accent);
-    padding: 24px 16px;
+    border-top: 2px solid var(--accent-orange);
+    padding: 22px 16px;
     margin-top: auto;
 }
 
 .footer-inner {
-    max-width: 1140px;
+    max-width: 1180px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
 }
 
 .footer-brand-row {
@@ -616,7 +642,7 @@ body {
 
 .footer-tagline {
     font-size: 11.5px;
-    color: #A1A1AA;
+    color: #E2E8F0;
 }
 
 .footer-nav {
@@ -625,15 +651,16 @@ body {
     gap: 8px;
 }
 
+/* Footer Page Buttons - Green-Blue Background */
 .footer-nav-link {
     text-decoration: none;
-    color: #F4F4F5;
-    background: var(--nav-surface);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    background: var(--btn-teal-blue);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 8px 14px;
     border-radius: 9px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-flex;
     align-items: center;
     gap: 7px;
@@ -641,25 +668,24 @@ body {
 }
 
 .footer-nav-link:hover {
-    background: var(--accent);
-    border-color: var(--accent);
-    color: #FFFFFF;
+    background: var(--btn-teal-blue-hover);
+    transform: translateY(-1px);
 }
 
 .footer-bottom {
     padding-top: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
     font-size: 11px;
-    color: #A1A1AA;
+    color: #E2E8F0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 8px;
 }
 
-/* Dedicated Static Content Pages (About, Contact, Privacy, Disclaimer) */
+/* Dedicated Content Pages (About, Contact, Privacy, Disclaimer) */
 .content-wrap {
-    max-width: 820px;
+    max-width: 840px;
     width: 100%;
     margin: 24px auto 40px;
     padding: 0 14px;
@@ -679,8 +705,8 @@ body {
     align-items: center;
     gap: 6px;
     background: var(--surface-warm);
-    color: var(--accent);
-    border: 1px solid #F3E5C4;
+    color: var(--accent-orange);
+    border: 1px solid #FED7AA;
     font-size: 10.5px;
     font-weight: 700;
     padding: 4px 10px;
@@ -714,7 +740,7 @@ body {
 
 .info-panel {
     background: var(--surface-warm);
-    border: 1px solid #F3E5C4;
+    border: 1px solid #FED7AA;
     border-radius: 12px;
     padding: 14px;
     margin: 14px 0 18px;
@@ -722,7 +748,7 @@ body {
 
 .info-panel p {
     margin-bottom: 8px;
-    color: #3F2E12;
+    color: #431407;
 }
 
 .info-panel p:last-child {
@@ -730,7 +756,7 @@ body {
 }
 
 .info-panel a {
-    color: var(--accent);
+    color: var(--accent-orange);
     font-weight: 700;
     text-decoration: none;
 }
@@ -739,30 +765,32 @@ body {
     text-decoration: underline;
 }
 
+/* Back Button - Green-Blue Background */
 .back-btn {
     display: inline-flex;
     align-items: center;
     gap: 7px;
     text-decoration: none;
-    background: var(--nav-dark);
+    background: var(--btn-teal-blue);
     color: #FFFFFF;
     font-size: 12px;
     font-weight: 700;
-    padding: 9px 15px;
+    padding: 9px 16px;
     border-radius: 9px;
     margin-top: 6px;
-    transition: background 0.18s ease;
+    transition: background 0.18s ease, transform 0.15s ease;
 }
 
 .back-btn:hover {
-    background: var(--accent);
+    background: var(--btn-teal-blue-hover);
+    transform: translateY(-1px);
 }
 
-/* Modals (Only for Quick Tips & Welcome Gift) */
+/* Modals (Quick Tips & Welcome Gift) */
 .modal-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(15, 10, 6, 0.58);
+    background: rgba(15, 23, 42, 0.5);
     backdrop-filter: blur(2px);
     z-index: 300;
     display: none;
@@ -781,7 +809,7 @@ body {
     max-width: 410px;
     border-radius: 16px;
     padding: 18px;
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, 0.22);
     border: 1px solid var(--border-card);
 }
 
@@ -791,7 +819,7 @@ body {
     justify-content: space-between;
     padding-bottom: 10px;
     margin-bottom: 12px;
-    border-bottom: 1px solid #ECECE8;
+    border-bottom: 1px solid #E2E8F0;
 }
 
 .modal-head h3 {
@@ -800,12 +828,12 @@ body {
 }
 
 .modal-close {
-    background: var(--surface-subtle);
+    background: var(--btn-teal-blue);
     border: none;
     width: 30px;
     height: 30px;
     border-radius: 8px;
-    color: var(--ink-secondary);
+    color: #FFFFFF;
     cursor: pointer;
     font-size: 14px;
 }
@@ -827,12 +855,22 @@ body {
 }
 
 .guide-list i {
-    color: #16A34A;
+    color: #059669;
     margin-right: 4px;
 }
 
-/* Small Screen Adjustments */
-@media (max-width: 400px) {
+/* Small Mobile Adjustments */
+@media (max-width: 420px) {
+    .header-inner {
+        padding: 10px 12px;
+    }
+    .brand-logo {
+        font-size: 14.5px;
+    }
+    .bonus-pill {
+        padding: 4px 9px;
+        font-size: 9.5px;
+    }
     .cards-grid {
         gap: 8px;
     }
