@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Earning Site</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .page-card {
+            background: var(--card-bg);
+            border-radius: 14px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            line-height: 1.7;
+            font-size: 13.5px;
+            color: #333;
+        }
+        .page-card h1 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .contact-box {
+            background: var(--highlight-bg);
+            padding: 14px;
+            border-radius: 10px;
+            margin: 14px 0;
+            font-size: 13px;
+        }
+        .contact-box p {
+            margin-bottom: 8px;
+        }
+        .contact-box p:last-child {
+            margin-bottom: 0;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 8px;
+            background: var(--btn-dark);
+            color: #fff;
+            text-decoration: none;
+            padding: 9px 15px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .back-link:hover {
+            background: var(--accent-orange);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
+                Earning Site
+            </a>
+        </div>
+        <a href="index.html" class="menu-btn" title="Home"><i class="fa-solid fa-house"></i></a>
+    </header>
+
+    <main class="container">
+        <div class="page-card">
+            <h1><i class="fa-solid fa-envelope" style="color: var(--accent-orange);"></i> Contact Us</h1>
+            <p>
+                Have a question, suggestion, or want to report a broken link on <b>Earning Site</b>? You can reach us through the channels below:
+            </p>
+            <div class="contact-box">
+                <p><b><i class="fa-brands fa-telegram" style="color: #0088CC;"></i> Telegram:</b> <a href="https://t.me/rewardsofficials_bot" target="_blank" rel="noopener noreferrer">@rewardsofficials_bot</a></p>
+                <p><b><i class="fa-solid fa-at" style="color: #555;"></i> Email:</b> support@example.com</p>
+            </div>
+            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to All Sites</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="about.html" class="footer-btn"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="contact.html" class="footer-btn"><i class="fa-solid fa-envelope"></i> Contact</a>
+                <a href="privacy-policy.html" class="footer-btn"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a>
+                <a href="disclaimer.html" class="footer-btn"><i class="fa-solid fa-triangle-exclamation"></i> Disclaimer</a>
+            </div>
+            <p class="footer-copy">© 2026 Earning Site. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
