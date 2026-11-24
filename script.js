@@ -353,6 +353,38 @@ const earningSites = [
     }
 ];
 
+const infoPages = {
+    about: {
+        title: "About Earning Site",
+        content: `
+            <p><b>Earning Site</b> is a curated directory of crypto faucets, PTC platforms, micro-tasks, and earning bots designed to help users discover reward websites in one place.</p>
+            <p>You can filter sites by category, save your favorites in your browser, and check quick tips before getting started.</p>
+        `
+    },
+    contact: {
+        title: "Contact Us",
+        content: `
+            <p>Have a question, feedback, or site suggestion? Reach out through our community channels:</p>
+            <p><b>Telegram:</b> <a href="https://t.me/rewardsofficials_bot" target="_blank" rel="noopener noreferrer">@rewardsofficials_bot</a></p>
+            <p><b>Email:</b> support@example.com</p>
+        `
+    },
+    privacy: {
+        title: "Privacy Policy",
+        content: `
+            <p>We respect your privacy. This website does not require user registration or collect personal passwords on its own.</p>
+            <p>Your saved favorites are stored locally in your browser using <b>localStorage</b>. External earning sites and third-party services have their own privacy policies when you visit them.</p>
+        `
+    },
+    disclaimer: {
+        title: "Disclaimer",
+        content: `
+            <p>Information on <b>Earning Site</b> is provided for general informational purposes only. Reward rates, rules, and payout availability on third-party platforms can change at any time.</p>
+            <p>Always do your own research before using external websites or wallets, and never share sensitive private keys or passwords.</p>
+        `
+    }
+};
+
 let currentCategory = 'all';
 let favorites = JSON.parse(localStorage.getItem('earningSiteFavs')) || [];
 
@@ -510,6 +542,14 @@ function openTipsModal(siteName) {
     `;
     document.getElementById('tipsModalLink').href = site.url;
     document.getElementById('tipsModal').classList.add('active');
+}
+
+function openInfoModal(pageKey) {
+    const page = infoPages[pageKey];
+    if (!page) return;
+    document.getElementById('infoModalTitle').textContent = page.title;
+    document.getElementById('infoModalBody').innerHTML = page.content;
+    document.getElementById('infoModal').classList.add('active');
 }
 
 function openGiftModal() {
