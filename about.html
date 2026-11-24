@@ -5,81 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Earning Site</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .page-card {
-            background: var(--card-bg);
-            border-radius: 14px;
-            padding: 20px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            line-height: 1.7;
-            font-size: 13.5px;
-            color: #333;
-        }
-        .page-card h1 {
-            font-size: 20px;
-            margin-bottom: 12px;
-            color: var(--text-dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .page-card p {
-            margin-bottom: 12px;
-        }
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 8px;
-            background: var(--btn-dark);
-            color: #fff;
-            text-decoration: none;
-            padding: 9px 15px;
-            border-radius: 8px;
-            font-size: 12px;
-            font-weight: 700;
-        }
-        .back-link:hover {
-            background: var(--accent-orange);
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <a href="index.html" class="logo">
-                <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
-                Earning Site
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-badge"><i class="fa-solid fa-layer-group"></i></span>
+                <span>Earning Site</span>
             </a>
+            <a href="index.html" class="drawer-toggle" title="Back to Home"><i class="fa-solid fa-house"></i></a>
         </div>
-        <a href="index.html" class="menu-btn" title="Home"><i class="fa-solid fa-house"></i></a>
     </header>
 
-    <main class="container">
-        <div class="page-card">
-            <h1><i class="fa-solid fa-circle-info" style="color: var(--accent-orange);"></i> About Earning Site</h1>
+    <main class="content-wrap">
+        <article class="content-card">
+            <span class="page-kicker"><i class="fa-solid fa-circle-info"></i> About Us</span>
+            <h1>About Earning Site</h1>
             <p>
-                <b>Earning Site</b> is a curated directory of crypto faucets, PTC platforms, micro-task websites, and earning bots. Our goal is to organize reward platforms in one place so users can explore features, payment methods, and quick tips easily.
+                <b>Earning Site</b> is a clean, organized directory of crypto faucets, PTC websites, micro-task platforms, and earning bots. It is built to help visitors explore earning opportunities, supported payout wallets, and quick tips in one place.
             </p>
+            <h2>What You Can Do Here</h2>
             <p>
-                You can filter platforms by category, search by name, save your favorite sites in your browser, and check helpful tips before getting started.
+                Browse verified-style listings by category, search quickly by keyword, save your preferred sites locally in your browser, and open helpful tips before starting on any platform.
             </p>
-            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to All Sites</a>
-        </div>
+            <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Back to All Sites</a>
+        </article>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <div class="footer-inner">
-            <div class="footer-links">
-                <a href="about.html" class="footer-btn"><i class="fa-solid fa-circle-info"></i> About</a>
-                <a href="contact.html" class="footer-btn"><i class="fa-solid fa-envelope"></i> Contact</a>
-                <a href="privacy-policy.html" class="footer-btn"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a>
-                <a href="disclaimer.html" class="footer-btn"><i class="fa-solid fa-triangle-exclamation"></i> Disclaimer</a>
+            <nav class="footer-nav" aria-label="Footer Navigation">
+                <a href="about.html" class="footer-nav-link"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="contact.html" class="footer-nav-link"><i class="fa-solid fa-envelope"></i> Contact</a>
+                <a href="privacy-policy.html" class="footer-nav-link"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</a>
+                <a href="disclaimer.html" class="footer-nav-link"><i class="fa-solid fa-triangle-exclamation"></i> Disclaimer</a>
+            </nav>
+            <div class="footer-bottom">
+                <span>© 2026 Earning Site. All rights reserved.</span>
             </div>
-            <p class="footer-copy">© 2026 Earning Site. All rights reserved.</p>
         </div>
     </footer>
 </body>
