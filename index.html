@@ -20,14 +20,35 @@
                 <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
                 Earning Site
             </a>
-            <a href="#gift" class="gift-pill">
+            <button class="gift-pill" onclick="openGiftModal()">
                 <i class="fa-solid fa-gift"></i> GET $3 WELCOME GIFT!
-            </a>
+            </button>
         </div>
-        <button class="menu-btn" onclick="alert('Menu clicked! Add your navigation links here.')">
+        <button class="menu-btn" onclick="toggleMenu()">
             <i class="fa-solid fa-bars"></i>
         </button>
     </header>
+
+    <!-- Slide-out Menu Overlay & Drawer -->
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    <aside class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <span class="logo"><i class="fa-solid fa-layer-group" style="color: #FF5500;"></i> Earning Site</span>
+            <button class="close-menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="side-menu-links">
+            <p class="menu-section-title">CATEGORIES</p>
+            <button onclick="menuFilter('all')"><i class="fa-solid fa-border-all"></i> All Sites</button>
+            <button onclick="menuFilter('faucet')"><i class="fa-solid fa-faucet-drip"></i> Faucet & PTC</button>
+            <button onclick="menuFilter('watch')"><i class="fa-solid fa-play"></i> Watch & Earn</button>
+            <button onclick="menuFilter('offers')"><i class="fa-solid fa-list-check"></i> Offers & Tasks</button>
+            <button onclick="menuFilter('favorites')"><i class="fa-solid fa-heart" style="color: #e74c3c;"></i> My Favorites (<span id="menuFavCount">0</span>)</button>
+            
+            <p class="menu-section-title" style="margin-top: 18px;">COMMUNITY & SUPPORT</p>
+            <a href="https://t.me/rewardsofficials_bot" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram" style="color: #0088CC;"></i> Join Telegram</a>
+            <button onclick="toggleMenu(); openGiftModal();"><i class="fa-solid fa-gift" style="color: #FF5500;"></i> Welcome Bonus Guide</button>
+        </div>
+    </aside>
 
     <!-- Search & Filter Section -->
     <div class="controls-container">
@@ -40,6 +61,9 @@
             <button class="filter-btn" onclick="setCategory('faucet', this)">Faucet & PTC</button>
             <button class="filter-btn" onclick="setCategory('watch', this)">Watch & Earn</button>
             <button class="filter-btn" onclick="setCategory('offers', this)">Offers & Tasks</button>
+            <button class="filter-btn" onclick="setCategory('favorites', this)">
+                <i class="fa-solid fa-heart" style="color: #e74c3c;"></i> Favorites (<span id="favCount">0</span>)
+            </button>
         </div>
     </div>
 
@@ -50,7 +74,48 @@
         </div>
     </div>
 
+    <!-- Tips / Details Modal -->
+    <div class="modal-overlay" id="tipsModal" onclick="closeModal('tipsModal')">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="tipsModalTitle">Site Tips</h3>
+                <button class="close-modal" onclick="closeModal('tipsModal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="tipsModalBody"></div>
+            <div class="modal-footer">
+                <a href="#" id="tipsModalLink" target="_blank" rel="noopener noreferrer" class="earn-btn" style="max-width: 100%; padding: 10px;">
+                    VISIT SITE NOW <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Welcome Gift Modal -->
+    <div class="modal-overlay" id="giftModal" onclick="closeModal('giftModal')">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3>🎁 $3 Welcome Gift Guide</h3>
+                <button class="close-modal" onclick="closeModal('giftModal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+                <p style="margin-bottom: 10px; font-size: 13px; color: #444;">
+                    Start earning free crypto today! Follow these simple steps to claim your welcome bonuses:
+                </p>
+                <ul class="modal-list">
+                    <li><i class="fa-solid fa-check-circle" style="color: #27AE60;"></i> Create a free <b>FaucetPay</b> account for instant withdrawals.</li>
+                    <li><i class="fa-solid fa-check-circle" style="color: #27AE60;"></i> Join <b>Exmacoin</b>, <b>FireFaucet</b> & <b>VieFaucet</b> using the Earn Now buttons.</li>
+                    <li><i class="fa-solid fa-check-circle" style="color: #27AE60;"></i> Verify your email on each site to unlock bonus rolls & gifts!</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="https://faucetpay.io/r/541045" target="_blank" rel="noopener noreferrer" class="earn-btn brown" style="max-width: 100%; padding: 10px;">
+                    OPEN FAUCETPAY <i class="fa-solid fa-wallet"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
-</html>
+            </html>
