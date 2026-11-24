@@ -4,7 +4,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "WALLET & EARN",
         iconText: "FP",
-        iconBg: "#1E88E5",
+        iconBg: "#1D4ED8",
         badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
         badge2: { text: "TOP", type: "contest", icon: "fa-circle" },
         tagline: "RECEIVE INSTANT CRYPTO PAYMENTS",
@@ -18,7 +18,6 @@ const earningSites = [
         metaValue: "Crypto Wallet",
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "brown",
         url: "https://faucetpay.io/r/541045"
     },
     {
@@ -26,7 +25,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "FAUCET & PTC",
         iconText: "E",
-        iconBg: "#1877F2",
+        iconBg: "#2563EB",
         badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
         badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
         tagline: "COMPLETE TASKS & RECEIVE REWARDS",
@@ -40,7 +39,6 @@ const earningSites = [
         metaValue: "FaucetPay",
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "brown",
         url: "https://exmacoin.com/?r=mddulalhosen0"
     },
     {
@@ -48,7 +46,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "FAUCET & PTC",
         iconText: "F",
-        iconBg: "#212F3D",
+        iconBg: "#1E293B",
         badge1: { text: "TOP", type: "orange", icon: "fa-fire" },
         badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
         tagline: "WEEKLY $100 ACTIVITY CONTEST LIVE!",
@@ -62,7 +60,6 @@ const earningSites = [
         metaValue: "+ $30",
         metaIcon: "fa-coins",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://firefaucet.win/ref/417972?s=mddulal596"
     },
     {
@@ -70,7 +67,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "FAUCET & PTC",
         iconText: "VF",
-        iconBg: "#16A085",
+        iconBg: "#0D9488",
         badge1: { text: "TOP", type: "orange", icon: "fa-fire" },
         badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
         tagline: "HIGHEST FAUCET CLAIM REWARDS!",
@@ -84,7 +81,6 @@ const earningSites = [
         metaValue: "FaucetPay",
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://viefaucet.com?r=662650f146e395ce252b194e"
     },
     {
@@ -92,7 +88,7 @@ const earningSites = [
         category: "offers",
         subCategory: "PTC & OFFERS",
         iconText: "RJ",
-        iconBg: "#E67E22",
+        iconBg: "#D97706",
         badge1: { text: "HOT", type: "orange", icon: "fa-fire" },
         badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
         tagline: "5 CONTESTS • $12,000 TOTAL PRIZES",
@@ -106,7 +102,6 @@ const earningSites = [
         metaValue: "FaucetPay",
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://www.rewardjoy.com/?r=mddulal596"
     },
     {
@@ -114,7 +109,7 @@ const earningSites = [
         category: "offers",
         subCategory: "TELEGRAM BOT",
         iconText: "TG",
-        iconBg: "#0088CC",
+        iconBg: "#0284C7",
         badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
         badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
         tagline: "EARN REWARDS ON TELEGRAM!",
@@ -128,7 +123,6 @@ const earningSites = [
         metaValue: "Telegram",
         metaIcon: "fa-paper-plane",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://t.me/rewardsofficials_bot"
     },
     {
@@ -136,7 +130,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "FAUCET & EARN",
         iconText: "FY",
-        iconBg: "#8E44AD",
+        iconBg: "#7E22CE",
         badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
         badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
         tagline: "CLAIM FREE CRYPTO FAUCET!",
@@ -150,7 +144,6 @@ const earningSites = [
         metaValue: "Crypto / FP",
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://feyorra.top/?r=764701"
     },
     {
@@ -158,7 +151,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "FAUCET & PTC",
         iconText: "EF",
-        iconBg: "#27AE60",
+        iconBg: "#15803D",
         badge1: { text: "TOP", type: "orange", icon: "fa-fire" },
         badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
         tagline: "EARN FREE COINS EVERY DAY!",
@@ -172,7 +165,6 @@ const earningSites = [
         metaValue: "Crypto / FP",
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://earnfreecoin.com/ref/9HKE54"
     },
     {
@@ -180,7 +172,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "LTC FAUCET",
         iconText: "LL",
-        iconBg: "#345D9D",
+        iconBg: "#1E40AF",
         badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
         badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
         tagline: "CLAIM FREE LITECOIN (LTC)!",
@@ -194,7 +186,6 @@ const earningSites = [
         metaValue: "Free LTC",
         metaIcon: "fa-coins",
         btnIcon: "fa-gift",
-        btnStyle: "dark",
         url: "https://ltclux.io/?ref=mddulal596"
     },
     {
@@ -202,7 +193,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "LTC EARNING",
         iconText: "LP",
-        iconBg: "#2980B9",
+        iconBg: "#0369A1",
         badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
         badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
         tagline: "LITECOIN REWARDS & TASKS!",
@@ -216,7 +207,6 @@ const earningSites = [
         metaValue: "Litecoin (LTC)",
         metaIcon: "fa-coins",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://ltcpool.io/?ref=2N5PWMRG"
     },
     {
@@ -224,7 +214,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "FAUCET & GAMES",
         iconText: "FA",
-        iconBg: "#C0392B",
+        iconBg: "#B91C1C",
         badge1: { text: "TOP", type: "orange", icon: "fa-fire" },
         badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
         tagline: "FAUCET, PTC & MINI GAMES!",
@@ -238,7 +228,6 @@ const earningSites = [
         metaValue: "FaucetPay",
         metaIcon: "fa-wallet",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://faucetarena.com/signup?ref=75354ead"
     },
     {
@@ -246,7 +235,7 @@ const earningSites = [
         category: "watch",
         subCategory: "LTC MINING",
         iconText: "LM",
-        iconBg: "#1B4F72",
+        iconBg: "#0F172A",
         badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
         badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
         tagline: "LITECOIN MINING & REWARDS!",
@@ -260,7 +249,6 @@ const earningSites = [
         metaValue: "Litecoin (LTC)",
         metaIcon: "fa-coins",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://ltcminer.com/831970"
     },
     {
@@ -268,7 +256,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "DOGE FAUCET",
         iconText: "DD",
-        iconBg: "#BA9F33",
+        iconBg: "#A16207",
         badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
         badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
         tagline: "CLAIM FREE DOGECOIN (DOGE)!",
@@ -282,7 +270,6 @@ const earningSites = [
         metaValue: "Free DOGE",
         metaIcon: "fa-coins",
         btnIcon: "fa-gift",
-        btnStyle: "dark",
         url: "https://dropdoge.io/?ref=mddulalhosen0"
     },
     {
@@ -290,7 +277,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "PEPE FAUCET",
         iconText: "PL",
-        iconBg: "#2E7D32",
+        iconBg: "#166534",
         badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
         badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
         tagline: "CLAIM FREE PEPE TOKENS!",
@@ -304,7 +291,6 @@ const earningSites = [
         metaValue: "Free PEPE",
         metaIcon: "fa-coins",
         btnIcon: "fa-gift",
-        btnStyle: "dark",
         url: "https://pepelux.io/?ref=mddulal596"
     },
     {
@@ -312,7 +298,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "BNB FAUCET",
         iconText: "DB",
-        iconBg: "#F3BA2F",
+        iconBg: "#CA8A04",
         badge1: { text: "GIFT", type: "orange", icon: "fa-gift" },
         badge2: { text: "Contest", type: "contest", icon: "fa-circle" },
         tagline: "CLAIM FREE BNB REWARDS!",
@@ -326,7 +312,6 @@ const earningSites = [
         metaValue: "Free BNB",
         metaIcon: "fa-coins",
         btnIcon: "fa-gift",
-        btnStyle: "dark",
         url: "https://dropbnb.io/?ref=mddulalhosen0"
     },
     {
@@ -334,7 +319,7 @@ const earningSites = [
         category: "faucet",
         subCategory: "SOLANA FAUCET",
         iconText: "FS",
-        iconBg: "#9945FF",
+        iconBg: "#7C3AED",
         badge1: { text: "Trusted", type: "orange", icon: "fa-shield-halved" },
         badge2: { text: "NEW", type: "purple", icon: "fa-bolt" },
         tagline: "CLAIM FREE SOLANA (SOL)!",
@@ -348,42 +333,9 @@ const earningSites = [
         metaValue: "Free SOL",
         metaIcon: "fa-coins",
         btnIcon: "fa-arrow-up-right-from-square",
-        btnStyle: "dark",
         url: "https://freesolana.top/?r=212925"
     }
 ];
-
-const infoPages = {
-    about: {
-        title: "About Earning Site",
-        content: `
-            <p><b>Earning Site</b> is a curated directory of crypto faucets, PTC platforms, micro-tasks, and earning bots designed to help users discover reward websites in one place.</p>
-            <p>You can filter sites by category, save your favorites in your browser, and check quick tips before getting started.</p>
-        `
-    },
-    contact: {
-        title: "Contact Us",
-        content: `
-            <p>Have a question, feedback, or site suggestion? Reach out through our community channels:</p>
-            <p><b>Telegram:</b> <a href="https://t.me/rewardsofficials_bot" target="_blank" rel="noopener noreferrer">@rewardsofficials_bot</a></p>
-            <p><b>Email:</b> support@example.com</p>
-        `
-    },
-    privacy: {
-        title: "Privacy Policy",
-        content: `
-            <p>We respect your privacy. This website does not require user registration or collect personal passwords on its own.</p>
-            <p>Your saved favorites are stored locally in your browser using <b>localStorage</b>. External earning sites and third-party services have their own privacy policies when you visit them.</p>
-        `
-    },
-    disclaimer: {
-        title: "Disclaimer",
-        content: `
-            <p>Information on <b>Earning Site</b> is provided for general informational purposes only. Reward rates, rules, and payout availability on third-party platforms can change at any time.</p>
-            <p>Always do your own research before using external websites or wallets, and never share sensitive private keys or passwords.</p>
-        `
-    }
-};
 
 let currentCategory = 'all';
 let favorites = JSON.parse(localStorage.getItem('earningSiteFavs')) || [];
@@ -409,76 +361,75 @@ function renderCards(sites) {
     container.innerHTML = '';
 
     if (sites.length === 0) {
-        container.innerHTML = `<p style="grid-column: 1/-1; text-align: center; padding: 30px; color: #777; font-size: 13px;">No sites found here. Try another filter or add favorites!</p>`;
+        container.innerHTML = `<p style="grid-column: 1 / -1; text-align: center; padding: 32px; color: #71717A; font-size: 13px;">No matching sites found.</p>`;
         return;
     }
 
     sites.forEach(site => {
-        const badge1Class = site.badge1.type === 'orange' ? 'badge-orange' : 'badge-purple';
-        const badge2Class = site.badge2.type === 'contest' ? 'badge-contest' : 'badge-purple';
-        const btnClass = site.btnStyle === 'brown' ? 'earn-btn brown' : 'earn-btn';
+        const badge1Class = site.badge1.type === 'orange' ? 'pill-orange' : 'pill-purple';
+        const badge2Class = site.badge2.type === 'contest' ? 'pill-status' : 'pill-purple';
         const isFav = favorites.includes(site.name);
 
         const cardHTML = `
-            <div class="card">
+            <article class="site-card">
                 <div>
-                    <div class="card-header">
-                        <div class="site-info">
-                            <div class="site-icon" style="background-color: ${site.iconBg};">
+                    <div class="card-top">
+                        <div class="card-brand">
+                            <div class="card-avatar" style="background-color: ${site.iconBg};">
                                 ${site.iconText}
                             </div>
-                            <div class="site-title">
+                            <div class="card-title-wrap">
                                 <h3>${site.name}</h3>
                                 <span>${site.subCategory}</span>
                             </div>
                         </div>
-                        <div class="badges">
-                            <span class="badge ${badge1Class}">
+                        <div class="card-badges">
+                            <span class="pill-badge ${badge1Class}">
                                 <i class="fa-solid ${site.badge1.icon}"></i> ${site.badge1.text}
                             </span>
-                            <span class="badge ${badge2Class}">
+                            <span class="pill-badge ${badge2Class}">
                                 <i class="fa-solid ${site.badge2.icon}" style="font-size: 6px;"></i> ${site.badge2.text}
                             </span>
                         </div>
                     </div>
 
-                    <div class="tagline">
+                    <div class="card-subline">
                         <i class="fa-solid fa-circle-check"></i> ${site.tagline}
                     </div>
 
-                    <div class="highlight-box">
+                    <div class="card-promo">
                         <span>💰</span> ${site.highlight}
                     </div>
 
-                    <ul class="features-list">
+                    <ul class="card-points">
                         <li><i class="fa-solid fa-bolt"></i> ${site.features[0]}</li>
                         <li><i class="fa-solid fa-rocket"></i> ${site.features[1]}</li>
                     </ul>
                 </div>
 
                 <div>
-                    <div class="card-actions">
-                        <button class="action-icon-btn" onclick="openTipsModal('${site.name}')">
+                    <div class="card-tools">
+                        <button type="button" class="tool-btn" onclick="openTipsModal('${site.name}')">
                             <i class="fa-solid fa-circle-info"></i> Tips
                         </button>
-                        <button class="action-icon-btn fav-btn ${isFav ? 'active' : ''}" onclick="toggleFavorite('${site.name}')">
+                        <button type="button" class="tool-btn ${isFav ? 'saved' : ''}" onclick="toggleFavorite('${site.name}')">
                             <i class="fa-${isFav ? 'solid' : 'regular'} fa-heart"></i> ${isFav ? 'Saved' : 'Save'}
                         </button>
                     </div>
 
-                    <div class="card-footer">
-                        <div class="meta-info">
-                            <span class="meta-label">${site.metaLabel}</span>
-                            <span class="meta-pill">
+                    <div class="card-bottom">
+                        <div class="payout-box">
+                            <span class="payout-label">${site.metaLabel}</span>
+                            <span class="payout-pill">
                                 <i class="fa-solid ${site.metaIcon}"></i> ${site.metaValue}
                             </span>
                         </div>
-                        <a href="${site.url}" target="_blank" rel="noopener noreferrer" class="${btnClass}">
+                        <a href="${site.url}" target="_blank" rel="noopener noreferrer" class="action-btn primary-action">
                             EARN NOW <i class="fa-solid ${site.btnIcon}"></i>
                         </a>
                     </div>
                 </div>
-            </div>
+            </article>
         `;
         container.innerHTML += cardHTML;
     });
@@ -486,14 +437,14 @@ function renderCards(sites) {
 
 function setCategory(category, btnElement) {
     currentCategory = category;
-    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.chip-btn').forEach(btn => btn.classList.remove('active'));
     if (btnElement) btnElement.classList.add('active');
     filterSites();
 }
 
 function menuFilter(category) {
     toggleMenu();
-    const buttons = document.querySelectorAll('.filter-btn');
+    const buttons = document.querySelectorAll('.chip-btn');
     buttons.forEach(btn => {
         btn.classList.remove('active');
         if (btn.getAttribute('onclick').includes(`'${category}'`)) {
@@ -522,34 +473,24 @@ function filterSites() {
     renderCards(filtered);
 }
 
-// Slide-out Menu Toggle
 function toggleMenu() {
     document.getElementById('sideMenu').classList.toggle('active');
     document.getElementById('menuOverlay').classList.toggle('active');
 }
 
-// Modals
 function openTipsModal(siteName) {
     const site = earningSites.find(s => s.name === siteName);
     if (!site) return;
     document.getElementById('tipsModalTitle').textContent = `${site.name} - Quick Tips`;
     document.getElementById('tipsModalBody').innerHTML = `
-        <p style="margin-bottom: 10px;"><b>Category:</b> ${site.subCategory}</p>
-        <p style="margin-bottom: 10px;"><b>Withdraw:</b> ${site.metaValue}</p>
-        <p style="background: #FAF2E1; padding: 10px; border-radius: 8px; color: #4A3818;">
-            💡 <b>Tip:</b> ${site.tips}
-        </p>
+        <p><b>Category:</b> ${site.subCategory}</p>
+        <p><b>Withdraw:</b> ${site.metaValue}</p>
+        <div class="info-panel" style="margin: 10px 0 0;">
+            <p>💡 <b>Tip:</b> ${site.tips}</p>
+        </div>
     `;
     document.getElementById('tipsModalLink').href = site.url;
     document.getElementById('tipsModal').classList.add('active');
-}
-
-function openInfoModal(pageKey) {
-    const page = infoPages[pageKey];
-    if (!page) return;
-    document.getElementById('infoModalTitle').textContent = page.title;
-    document.getElementById('infoModalBody').innerHTML = page.content;
-    document.getElementById('infoModal').classList.add('active');
 }
 
 function openGiftModal() {
@@ -560,6 +501,5 @@ function closeModal(modalId) {
     document.getElementById(modalId).classList.remove('active');
 }
 
-// Initial Load
 updateFavCounts();
 renderCards(earningSites);
