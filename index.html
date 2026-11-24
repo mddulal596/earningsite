@@ -44,6 +44,12 @@
             <button onclick="menuFilter('offers')"><i class="fa-solid fa-list-check"></i> Offers & Tasks</button>
             <button onclick="menuFilter('favorites')"><i class="fa-solid fa-heart" style="color: #e74c3c;"></i> My Favorites (<span id="menuFavCount">0</span>)</button>
             
+            <p class="menu-section-title" style="margin-top: 18px;">PAGES & INFO</p>
+            <button onclick="toggleMenu(); openInfoModal('about');"><i class="fa-solid fa-circle-info"></i> About</button>
+            <button onclick="toggleMenu(); openInfoModal('contact');"><i class="fa-solid fa-envelope"></i> Contact</button>
+            <button onclick="toggleMenu(); openInfoModal('privacy');"><i class="fa-solid fa-shield-halved"></i> Privacy Policy</button>
+            <button onclick="toggleMenu(); openInfoModal('disclaimer');"><i class="fa-solid fa-triangle-exclamation"></i> Disclaimer</button>
+
             <p class="menu-section-title" style="margin-top: 18px;">COMMUNITY & SUPPORT</p>
             <a href="https://t.me/rewardsofficials_bot" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram" style="color: #0088CC;"></i> Join Telegram</a>
             <button onclick="toggleMenu(); openGiftModal();"><i class="fa-solid fa-gift" style="color: #FF5500;"></i> Welcome Bonus Guide</button>
@@ -74,6 +80,27 @@
         </div>
     </div>
 
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <button type="button" class="footer-btn" onclick="openInfoModal('about')">
+                    <i class="fa-solid fa-circle-info"></i> About
+                </button>
+                <button type="button" class="footer-btn" onclick="openInfoModal('contact')">
+                    <i class="fa-solid fa-envelope"></i> Contact
+                </button>
+                <button type="button" class="footer-btn" onclick="openInfoModal('privacy')">
+                    <i class="fa-solid fa-shield-halved"></i> Privacy Policy
+                </button>
+                <button type="button" class="footer-btn" onclick="openInfoModal('disclaimer')">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Disclaimer
+                </button>
+            </div>
+            <p class="footer-copy">© 2026 Earning Site. All rights reserved.</p>
+        </div>
+    </footer>
+
     <!-- Tips / Details Modal -->
     <div class="modal-overlay" id="tipsModal" onclick="closeModal('tipsModal')">
         <div class="modal-box" onclick="event.stopPropagation()">
@@ -86,6 +113,22 @@
                 <a href="#" id="tipsModalLink" target="_blank" rel="noopener noreferrer" class="earn-btn" style="max-width: 100%; padding: 10px;">
                     VISIT SITE NOW <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modal (About, Contact, Privacy Policy, Disclaimer) -->
+    <div class="modal-overlay" id="infoModal" onclick="closeModal('infoModal')">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="infoModalTitle">Information</h3>
+                <button class="close-modal" onclick="closeModal('infoModal')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="modal-body" id="infoModalBody"></div>
+            <div class="modal-footer">
+                <button type="button" class="earn-btn brown" style="max-width: 100%; padding: 10px; border: none; cursor: pointer;" onclick="closeModal('infoModal')">
+                    CLOSE <i class="fa-solid fa-check"></i>
+                </button>
             </div>
         </div>
     </div>
@@ -118,4 +161,4 @@
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
-            </html>
+                    </html>
